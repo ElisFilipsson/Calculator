@@ -1,0 +1,77 @@
+/* JavaScript och Programmeringsmetodik */
+/* Coursework Assignment 1 (CW1) */ 
+/* Teacher : Jason De Donno */ 
+/* By: Sandra Filipsson, MWD 2015 */
+/* Date: 2016-02-23 */
+
+/*all comments on this page is written on the row above the code in question*/
+
+@charset "UTF-8";
+* {
+   box-sizing:border-box;
+}
+
+/* declare rules/design for the hole page*/
+
+body { 
+    font-family: "Lucida Sans Unicode", 'Open Sans', sans-serif; 
+    background: black;
+    width: 100%;
+    height: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-animation: bugfix infinite 1s; 
+    background: url(../img/pattern02.jpg);
+    background-position: top left;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    text-align: right;
+    }
+
+@-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} }
+
+/*________(groups button and text)________*/
+
+#surrounder {
+    margin-top: 25%;
+}
+
+/*________text styling________*/
+
+p {
+    text-shadow: 0px 5px 5px #053558;
+    }
+
+/*________smal text styling________*/
+
+#small {
+    color: #053558;
+    font-size: 12px;
+    font-weight: 500;
+    text-shadow: none;
+    }
+
+/*________button to open Calculator________*/
+
+#onClick {
+    color: #09568e;
+    width: 40%;
+    height: auto;
+    border: 1px solid #09568e;
+    border-radius: 10px;
+    background: grey;
+    background-image: -webkit-linear-gradient(top, #96a09b, #07ff8d);
+    background-image: linear-gradient(to bottom, #96a09b, #07ff8d);
+    box-shadow: 0px 5px 5px #888888;
+    }
+
+/*________footer________*/
+
+.foot {
+    color:#09568e;
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+    height:20%;
+    }

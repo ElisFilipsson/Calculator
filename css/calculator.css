@@ -1,0 +1,229 @@
+/* JavaScript och Programmeringsmetodik */
+/* Coursework Assignment 1 (CW1) */ 
+/* Teacher : Jason De Donno */ 
+/* By: Sandra Filipsson, MWD 2015 */
+/* Date: 2016-02-23 */
+
+/*all comments on this page is written on the row above the code in question*/
+
+@charset "UTF-8";
+* {
+   box-sizing:border-box;
+}
+
+/* __________________________________________________________declare rules/design for the hole page */
+
+body { 
+    font-family: "Lucida Sans Unicode", 'Open Sans', sans-serif; 
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-animation: bugfix infinite 1s; 
+    }
+@-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} }
+
+/* _________________________________________________________text and link rules/design for the hole page */
+
+p {
+    text-shadow: -0.5px -0.5px #2a2a2a;
+    }
+a {
+    color: #2cc62c;
+    font-weight: 600;
+    font-size: 13px;
+    }
+
+/* ________________________________________________________________header */
+
+#head {  
+    background-color: dimgray;
+    text-align: center;
+    padding-top: auto;
+    padding-bottom: auto;
+    }
+
+/* ________________________________________________________________styling of surronding div(iphone look) */
+
+#frame {
+    width: 250px;
+    height: 520px;
+    background-image: -webkit-linear-gradient(left, #d0d0d0, #d9d9d9, #ffffff, #d9d9d9, #939090);
+    background-image: linear-gradient(to right, #d0d0d0, #d9d9d9, #ffffff, #d9d9d9, #939090);
+    border-radius: 35px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 120px;
+    border: 1px solid #212020;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    }
+
+/* ________________________________________________________________styling of textarea(screen output) */
+
+#blackScreen {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 240px;
+    height: 440px;
+    margin: auto;
+    border: 1px solid black;
+    background-color: #141414;
+    border-radius: 3px;
+    padding-bottom: 2px;
+    -webkit-flex: 5 0 100%;
+    -ms-flex: 5 0 100%;
+    flex: 5 0 100%;
+    }
+#screentag{
+    border: 0px;
+    border-radius: 5px;
+    margin: 1%;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    font-size: 30px;
+    font-weight: 500;
+    color: #bababa;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline:none;
+    width: 220px;
+    max-width: 220px;
+    height: 180px;
+    background-color: #141414;
+    text-align: right;
+    resize: none;
+    word-wrap: break-word; /* for new break row when printing numbers in one section whiteout space, so it doesn't go out of div */
+    }
+#screentag:focus{
+    box-shadow: 0 0 4px #0aff4c;
+    border: 0,2px solid #0aff4c;
+    background-color: #141313;
+    }
+
+/* ________________________________________________________________styling of buttons(divs) */
+
+.buttons {
+    display: -webkit-box;  
+    display: -webkit-flex;  
+    display: -ms-flexbox;  
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 19%;
+    -ms-flex: 1 0 19%;
+    flex: 1 0 19%;
+    background: #4c7071;
+    background-image: -webkit-linear-gradient(top, #639596 0%, #4c7071 100%);
+    background-image: linear-gradient(to bottom, #639596 0%, #4c7071 100%);
+    -webkit-box-pack: space-around;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: space-around;
+    justify-content: space-around;
+    padding: auto;
+    padding-top: 1%;
+    margin: 0%;
+    border-left: 0.2px solid #606261;
+    border-top: 1px solid #77b5b9;
+    border-bottom: 0.5px solid #1b3233;
+    }
+.buttons:hover {
+    background-image: none;
+    cursor: pointer;
+    }
+.numbers p{
+    color: #bababa;
+    font-size: 22px;
+    font-weight: 500;
+    margin: auto;
+    }
+.operators p{
+    color: #bababa;
+    font-size: 22px;
+    font-weight: 500;
+    margin: auto;
+    }
+.deletes p{
+    color: #bababa;
+    font-size: 22px;
+    font-weight: 300;
+    margin: auto;
+    }
+.extras p {
+    color: #bababa;
+    font-size: 18px;
+    font-weight: 300;
+    margin: auto;
+    }
+.operators {
+    background: #2c4a4b;
+    background-image:  -webkit-linear-gradient(top, #3b6769, #2c4a4b);
+    background-image:  linear-gradient(to bottom, #3b6769, #2c4a4b);
+    border-right: 0.2px solid #606261;
+    }
+#comma {
+    border-right-width: 0px;
+    }
+.extras {
+    margin-left: 0%;
+    background: #2c4a4b;
+    background-image:  -webkit-linear-gradient(top, #3b6769, #2c4a4b);
+    background-image:  linear-gradient(to bottom, #3b6769, #2c4a4b);
+    }
+.deletes {
+    background: #1e3839;
+    background-image:  -webkit-linear-gradient(top, #3b6769, #2c4a4b);
+    background-image:  linear-gradient(to bottom, #3b6769, #2c4a4b);
+    }
+#zero {
+    -webkit-box-flex: 2;
+    -webkit-flex: 2 0 40%;
+    -ms-flex: 2 0 40%;
+    flex: 2 0 40%;
+    }
+#equal {
+    background: #2cc62c;
+    background-image: -webkit-linear-gradient(top, #64f564, #2cc62c);
+    background-image: linear-gradient(to bottom, #64f564, #2cc62c);
+    }
+
+/* ________________________________________________________________extra styling divs */
+
+#speaker01, #speaker02 {
+    background: #0a0a0a;
+    border-radius: 5px;
+    height: 5px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 5px;
+    -ms-flex: 0 0 5px;
+    flex: 0 0 5px;
+    border: 3px solid #000;
+    margin-bottom: 20px;
+    margin-right: 2%;
+    margin-left: auto;
+    }
+#speaker02 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 40px;
+    -ms-flex: 0 0 40px;
+    flex: 0 0 40px;
+    margin-left: 2%;
+    margin-right: auto;
+    }
