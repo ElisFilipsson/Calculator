@@ -1,0 +1,1 @@
+This was a project for the course JavaScript at KYH in the class MWD15 authored by Sandra Filipsson.
